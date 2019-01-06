@@ -5,6 +5,7 @@ import com.zjt.model.MyUserInfo;
 import com.zjt.model.SysPermission;
 import com.zjt.model.SysRole;
 import com.zjt.service.UserInfoService;
+import com.zjt.sys.entity.User;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;

@@ -55,13 +55,22 @@ public class TwoSum {
     }
 
     public static void main(String[] args) throws IllegalAccessException {
-        int nums[] = {3, 2, 4};
-        int target = 6;
-        int[] result = new int[2];
+//        int nums[] = {3, 2, 4};
+//        int target = 6;
+//        int[] result = new int[2];
+//
+//        TwoSum twoSum = new TwoSum();
+//        result = twoSum.twoSum2(nums, target);
+//        System.out.println(result);
 
-        TwoSum twoSum = new TwoSum();
-        result = twoSum.twoSum2(nums, target);
-        System.out.println(result);
+        int count = 0;
+        int num = 0;
+        for (int i=0;i<=100;i++){
+            num = num + i;
+            count = count++;
+        }
+        System.out.println(num*count);
+
     }
 
 

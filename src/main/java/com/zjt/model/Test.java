@@ -1,11 +1,17 @@
 package com.zjt.model;
 
+import com.alibaba.fastjson.JSON;
+import com.vladmihalcea.hibernate.type.json.JsonStringType;
 import lombok.Data;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Auther: zhou.jingtao
@@ -14,6 +20,8 @@ import java.util.Date;
  */
 @Entity
 @Data
+@TypeDef(name = "json", typeClass = JsonStringType.class)
+
 public class Test {
 
     @Id
@@ -24,8 +32,18 @@ public class Test {
 
     private String userName;
 
-    public Test(Date createTime, String userName) {
+
+    @Type( type = "json" )
+    @Column( columnDefinition = "json" )
+    private List<String> jsonValue;
+
+
+    public Test() {
+    }
+
+    public Test(Date createTime, String userName, List<String> jsonValue) {
         this.createTime = createTime;
         this.userName = userName;
+        this.jsonValue = jsonValue;
     }
 }

@@ -21,18 +21,18 @@ public class RomanToInt {
         map.put("D", 500);
         map.put("M", 1000);
         Integer result = 0;
-        for (int i = 0; i < s.length(); i++) {
+        for (int i=0 ;i<s.length();i++){
+
             String a = String.valueOf(s.charAt(i));
-            if (i == s.length()-1){
+            if (s.length()-1 == i){
                 result += map.get(a);
-            } else if (map.get(a) < map.get(String.valueOf(s.charAt(i + 1)))) {
-                result += map.get(String.valueOf(s.charAt(i + 1))) - map.get(a);
-                i += 1;
+            } else if (map.get(a) < map.get(String.valueOf(s.charAt(i+1)))){
+                result += map.get(String.valueOf(s.charAt(i+1))) - map.get(a);
+                i+=1;
             } else {
                 result += map.get(a);
             }
         }
-
         return result;
     }
 

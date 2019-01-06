@@ -1,6 +1,7 @@
 package com.zjt.service;
 
 import com.zjt.model.MyUserInfo;
+import com.zjt.sys.entity.User;
 
 /**
  * @author zhou.jingtao

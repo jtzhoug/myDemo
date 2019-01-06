@@ -36,6 +36,8 @@ public class ShiroConfig {
         filterChainDefinitionMap.put("/login","anon");
         filterChainDefinitionMap.put("/test/*","anon");
         filterChainDefinitionMap.put("/sys/**","anon");
+        filterChainDefinitionMap.put("/testJson/**","anon");
+
         filterChainDefinitionMap.put("/**", "authc");
 
 

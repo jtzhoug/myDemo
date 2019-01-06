@@ -20,10 +20,10 @@ public class MyUserInfoRepositoryTest {
 
     @Autowired
     private UserInfoService userInfoService;
-    @Test
-    public void findByName() throws Exception {
-        MyUserInfo userInfo = userInfoService.findByUserName("admin");
-        System.out.println(userInfo.getName());
-    }
+//    @Test
+//    public void findByName() throws Exception {
+//        MyUserInfo userInfo = userInfoService.findByUserName("admin");
+//        System.out.println(userInfo.getName());
+//    }
 
 }
